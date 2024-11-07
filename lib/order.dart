@@ -180,7 +180,7 @@ class Listfood extends StatelessWidget {
           SizedBox(height: 10),
           buildSeparator(),
           SizedBox(height: 10),
-          buildItemRow("Jus Jeruk", "Rp 25.000", "assets/jus1.jpeg", context),
+          buildItemRow("Teh Botol", "Rp 25.000", "assets/teh1.jpeg", context),
           SizedBox(height: 10),
           buildSeparator(),
           SizedBox(height: 10),

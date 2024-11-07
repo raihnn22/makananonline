@@ -57,6 +57,104 @@ class AddData extends StatelessWidget {
               ],
             ),
           ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 25),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const SizedBox(height: 20),
+                const Text("Nama Produk"),
+                const SizedBox(height: 8),
+                TextField(
+                  decoration: InputDecoration(
+                    hintText: "Masukan nama produk",
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    filled: true,
+                    fillColor: Colors.white,
+                  ),
+                ),
+                const SizedBox(height: 20),
+                const Text("Harga"),
+                const SizedBox(height: 8),
+                TextField(
+                  decoration: InputDecoration(
+                    hintText: "Masukan Harga",
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    filled: true,
+                    fillColor: Colors.white,
+                  ),
+                ),
+                const SizedBox(height: 20),
+                const Text("Kategori produk"),
+                const SizedBox(height: 8),
+                SizedBox(
+                  width: double.infinity, // Menyamakan lebar dengan input lainnya
+                  child: Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 10),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                      color: Colors.white,
+                      border: Border.all(color: Colors.grey),
+                    ),
+                    child: DropdownButtonHideUnderline(
+                      child: DropdownButton<String>(
+                        isExpanded: true, // Agar DropdownButton mengikuti lebar container
+                        value: "Makanan",
+                        items: const [
+                          DropdownMenuItem(
+                            value: "Makanan",
+                            child: Text("Makanan"),
+                          ),
+                          DropdownMenuItem(
+                            value: "Minuman",
+                            child: Text("Minuman"),
+                          ),
+                        ],
+                        onChanged: (value) {},
+                      ),
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 20),
+                const Text("Image"),
+                const SizedBox(height: 8),
+                TextField(
+                  decoration: InputDecoration(
+                    hintText: "Choose file",
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    filled: true,
+                    fillColor: Colors.white,
+                  ),
+                ),
+                const SizedBox(height: 40),
+                Center(
+                  child: ElevatedButton(
+                    onPressed: () {},
+                    style: ElevatedButton.styleFrom(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 100,
+                        vertical: 15,
+                      ),
+                      backgroundColor: Colors.blue,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                    ),
+                    child: const Text(
+                      "Submit",
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
         ],
       ),
     );
